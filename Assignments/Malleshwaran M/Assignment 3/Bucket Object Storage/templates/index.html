@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://malleshbucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/index.css">
+    </head>
+   <body>
+    <h1>IBM Object Storage</h1>
+      {% for row in files %}
+            {% if row[-3:]!="css" %}
+               <div style="border: 1px solid #EFEFEF;margin:10px;">
+                  <h3>Filename : {{row}} </h3>
+                  <img class="pic" src="https://malleshbucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}"></td>
+               </div>
+            {% endif %}
+      {% endfor %}
+   </body>
+</html>
