@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <nav class="navbar bg-primary navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand" style="color:black;">Inventory Management</a>
+                <a href="aboutus" class="navbar-brand" style="color:black;">About us</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="signin" style="color:black;font-size:20px;">Sign In</a></li>
+                <li ><a href="signup" style="color:black;font-size:20px;">Sign up</a></li>
+            </ul>           
+        </div>
+    </nav>
+    <br><br>
+
+    {% block body %} {% endblock %}
+</body>
