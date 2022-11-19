@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+
+
+{% block head %}
+    <title>success</title>
+{% endblock %}
+
+{% block body %}
+<br><br><br>
+
+<div class="container">
+    <h2>{{msg}}</h2>
+    <a href="{{url_for('dashboard')}}">Go to dashboard</a>
+</div>
+{% endblock %}

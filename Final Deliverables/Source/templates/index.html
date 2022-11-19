@@ -1,0 +1,29 @@
+{% extends 'base1.html' %}
+
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "2e563a52-d949-4d72-95c9-5312ec22c776", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "87241a58-c07f-4693-a7fe-47963ce28192", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    <div class="container-fluid" style="color:white;background-color:#003B6A;">
+        <div style="margin-top:18%; margin-bottom: 22%;">
+            <center><h1 style="font-size:60px;font-family:Sans-seri ;">Inventory 
+                Management</h1></center>
+            <center><h3 style="color: #70AE97;">We will never let you go out of stock!</h3></center>
+        </div>
+    </div>
+{% endblock %}

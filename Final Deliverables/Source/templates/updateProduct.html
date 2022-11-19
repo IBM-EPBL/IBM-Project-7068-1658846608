@@ -1,0 +1,22 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+    <title>Sign in</title>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <form action="{{ url_for('doUpdateProduct') }}" method="POST">
+            <br>
+            <div class="form-outline mb-4">
+              <input type="text" placeholder="Product Name" class="form-control" name="pName"/>
+            </div>
+
+            <br>
+            <div class="form-outline mb-4">
+              <input type="number" placeholder="Quantity" class="form-control" name="pQuantity"/>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block mb-4">Update</button>
+        </form>
+    </div>
+{% endblock %}

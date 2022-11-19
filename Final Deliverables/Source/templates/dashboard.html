@@ -1,0 +1,38 @@
+{% extends 'base1.html' %}
+
+
+{% block head %}
+    <title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+<body background="{{ url_for('static', filename='inventory.jpg') }}">
+    
+<br><br><br>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr class="danger">
+                <th>PRODUCTNAME</th>
+                <th>CATEGORY</th>
+                <th>AVAILABLE QUANTITY
+                </th>  
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data_list %}
+            <tr class="info">
+                <td>{{item.NAME}}</td>
+                <td>{{item.CATEGORY}}</td>
+                <td>{{item.QUANTITY}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br><br>
+    <a href="addProduct" type="button" class="btn btn-primary">Add Product</a>
+    <a href="updateProduct" type="button" class="btn btn-success">Update Product</a>
+</div>
+</body>
+{% endblock %}
